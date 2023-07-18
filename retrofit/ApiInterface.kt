@@ -21,6 +21,6 @@ interface ApiInterface {
     fun userRegister(@Body userRequestData: UserRequestData?
     ): Call<UserRegister?>?
 
-    @GET("api/users")
+    @GET(IConstants.GET_USER_LIST)
     suspend fun getUserList(@Query("page") page: Int) : UserResponse
 }
